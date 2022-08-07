@@ -1,0 +1,1 @@
+{"version":"0.0.1","name":"socket-chat-example","dependencies":{"cors":{"version":"2.8.5"},"express":{"version":"4.18.1"},"socket.io":{"version":"4.5.1"},"uuid":{"version":"8.3.2"}}}
