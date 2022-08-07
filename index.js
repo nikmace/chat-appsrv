@@ -5,6 +5,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
+require("dotenv").config();
 
 app.use(cors());
 
@@ -35,6 +36,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, () => {
+server.listen(process.env.PORT || 3001, process.env.HOST || "0.0.0.0", () => {
   console.log("listening on *:3001");
 });
