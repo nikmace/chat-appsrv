@@ -25,7 +25,9 @@ io.on("connection", (socket) => {
   socket.on("chat message", (msg) => {
     const toSend = {
       id: uuidv4(),
-      message: msg.value,
+      message: msg.value.message,
+      username: msg.value.username,
+      sex: msg.value.sex,
       sessionId: socket.id,
     };
     io.emit("chat message", toSend);
